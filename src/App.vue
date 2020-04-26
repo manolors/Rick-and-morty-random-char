@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Rick And Morty logo" src="./assets/logo.png">
+    <RandomChar />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RandomChar from './components/RandomChar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    RandomChar
+  },
 }
 </script>
 
