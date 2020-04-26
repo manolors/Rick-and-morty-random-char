@@ -1,24 +1,7 @@
 # lolo-vue-site
 
-## Project setup
+## Deploy with heroku
 ```
-npm install
+heroku create lolo-vue-site --build-pack heroku/nodejs
+git push heroku master
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
