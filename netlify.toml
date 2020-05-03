@@ -1,3 +1,14 @@
 [build]
 publish = "dist/"
 command = "npm run build"
+
+[build.environment]
+MAX_CHARS = 423
+CHAR_ID = 1
+
+[context.deploy-preview.environment]
+MAX_CHARS = 423
+CHAR_ID = 1
+
+[context.production]
+environment = { MAX_CHARS = 423, CHAR_ID = 1 }

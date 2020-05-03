@@ -8,13 +8,17 @@
 <script>
 import axios from 'axios';
 
+console.log(process.env)
+let MAX_CHARS = process.env.MAX_CHARS || 423;
+let charId = process.env.CHAR_ID || Math.floor(Math.random()*MAX_CHARS)
+
 export default {
   name: 'RandomChar',
   props: {
     data: String
   },
    created() {
-    axios.get(`https://rickandmortyapi.com/api/character/`+Math.floor(Math.random()*423))
+    axios.get(`https://rickandmortyapi.com/api/character/` + charId)
     .then(response => {
       this.data = response.data
     })
