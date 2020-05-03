@@ -11,4 +11,4 @@ MAX_CHARS = 423
 CHAR_ID = 1
 
 [context.production]
-environment = { MAX_CHARS = 423, CHAR_ID = 1 }
+environment = { CHAR_ID = "1" }
