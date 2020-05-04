@@ -5,8 +5,6 @@
 git clone https://github.com/manolors/Rick-and-morty-random-char.git
 cd Rick-and-morty-random-char
 git checkout heroku-express
-npm install
-npm run build
 heroku create vue-random-char-generator --region eu
 heroku buildpacks:add heroku/nodejs
 heroku buildpacks:add https://github.com/hone/heroku-buildpack-static
