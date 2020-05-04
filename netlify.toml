@@ -1,6 +1,7 @@
-[build]
+[context.production]
 publish = "dist/"
 command = "npm run build"
 
-[context.production.environment]
-CHAR_ID = "1"
+[context.deploy-preview]
+publish = "dist/"
+command = "npm run build"
