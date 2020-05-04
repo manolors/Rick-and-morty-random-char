@@ -1,16 +1,8 @@
 # lolo-vue-site
 
-## Deploy with Netlify
+## Deploy with Heroku+Express
 ```
-git clone https://github.com/manolors/Rick-and-morty-random-char.git 
-cd Rick-and-morty-random-char
-netlify init
-netlify deploy
-```
-
-## Deploy with Heroku
-```
-git clone https://github.com/manolors/Rick-and-morty-random-char.git 
+git clone https://github.com/manolors/Rick-and-morty-random-char.git
 cd Rick-and-morty-random-char
 npm install
 heroku create vue-random-char-generator --buildpack heroku/nodejs --region eu
