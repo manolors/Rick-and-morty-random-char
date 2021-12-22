@@ -1,10 +1,10 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-const webhookEndpoint = "https://webhook.site/ae9798bc-5609-4443-aed5-bfb59520dbfe"
+const webhookEndpoint = "https://discord.com/api/webhooks/923207419918696449/rW9T60zGF9mF_hIuSLNurOYrMLOHvlMvVkDPZdpKyobMsAjGCXpFZWC8Z7lYVwdVLrVA"
 
 const fetch = require("node-fetch");
 
 exports.handler = async () => {
-    const message = "Repo building!"
+    const message = "Building!"
     await fetch(
       webhookEndpoint,
       {
