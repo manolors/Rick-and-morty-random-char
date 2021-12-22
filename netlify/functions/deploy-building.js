@@ -3,7 +3,7 @@ const webhookEndpoint = "https://discord.com/api/webhooks/923207419918696449/rW9
 
 const fetch = require("node-fetch");
 
-exports.handler = async (event) => {
+exports.handler = async (event, context) => {
     // const message = "Building!"
     await fetch(
       webhookEndpoint,
@@ -15,7 +15,7 @@ exports.handler = async (event) => {
         body: JSON.stringify(params = {
           username: "Buildbot",
           avatar_url: "",
-          content: event
+          content: "tenemos este event -> " + JSON.stringify(event) + " y este context " + JSON.stringify(context)
         }),
       }
     );
