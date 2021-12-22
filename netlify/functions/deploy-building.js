@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
         body: JSON.stringify(params = {
           username: "Buildbot",
           avatar_url: "",
-          content: "building! payload -> " + event.body.payload
+          content: "building! payload context -> " + context
         }),
       }
     );
