@@ -5,7 +5,11 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event) => {
     const message = "Deploy succeeded!"
-    console.log("Wololoooooooooooooooo")
+    console.log("DEPLOY succeeded!! Wololoooooooooooooooo!!!!!")
+    console.log("event" + JSON.stringify(event))
+    console.log("context" + JSON.stringify(context))
+    console.log("handler" + JSON.stringify(handler))
+
     await fetch(
       webhookEndpoint,
       {
@@ -16,8 +20,7 @@ exports.handler = async (event) => {
         body: JSON.stringify(params = {
           username: "Buildbot",
           avatar_url: "",
-          content: event.body
-          //content: message
+          content: message
         }),
       }
     );
