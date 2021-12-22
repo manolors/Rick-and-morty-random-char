@@ -1,6 +1,5 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 
-
 function Saludar(nombre) {
   return `Hello ${nombre}`
 }
@@ -8,7 +7,6 @@ function Saludar(nombre) {
 function Contraseña(password) {
   return ` Tu contraseña es ${password}`
 }
-
 
 const handler = async (event) => {
   try {
