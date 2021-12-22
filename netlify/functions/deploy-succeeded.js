@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event) => {
     const message = "Deploy succeeded!"
+    console.log("Wololoooooooooooooooo")
     await fetch(
       webhookEndpoint,
       {

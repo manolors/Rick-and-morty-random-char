@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event, context) => {
     // const message = "Building!"
+    console.log("Wololoooooooooooooooo!!!!!")
     await fetch(
       webhookEndpoint,
       {
