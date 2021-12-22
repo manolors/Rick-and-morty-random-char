@@ -9,7 +9,9 @@ function Saludar(nombre) {
 const handler = async (event) => {
   try {
     console.log("%j", event)
-    const nombre = event.queryStringParameters.name || 'World'
+    //const nombre = event.queryStringParameters.name || 'World'
+    const body = JSON.parse(event.body)
+    const nombre = body.name || 'World'
     return {
       statusCode: 200,
       body: JSON.stringify({ message: Saludar(nombre)  }),
