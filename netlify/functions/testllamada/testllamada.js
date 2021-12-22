@@ -17,6 +17,13 @@ const handler = async (event) => {
     const body = JSON.parse(event.body)
     const nombre = body.name || 'World'
     const password = body.password
+
+    if (password != process.env.PASSWORD_LOLO) {
+      return {
+        statusCode: 401,
+        body: JSON.stringify({ message: "Contraseña incorrecta"})
+      }
+    }
     return {
       statusCode: 200,
       body: JSON.stringify({ message: Saludar(nombre)+ " " + Contraseña(password)  }),
