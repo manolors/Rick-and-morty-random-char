@@ -3,10 +3,12 @@ const webhookEndpoint = "https://discord.com/api/webhooks/923207419918696449/rW9
 
 const fetch = require("node-fetch");
 
-exports.handler = async (event, context, handler) => {
+exports.handler = async (event) => {
     const nombre = JSON.parse(event.body).name
     const message = `Sitio *${nombre}* compilándose!`
-
+    console.log("typeoof event" + typeof(event))
+    console.log("typeoof event.body" + typeof(event.body))
+    console.log("typeoof event.body.name" + typeof(event.body.name))
     await fetch(
       webhookEndpoint,
       {

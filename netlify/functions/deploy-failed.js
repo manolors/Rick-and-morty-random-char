@@ -6,7 +6,6 @@ const fetch = require("node-fetch");
 exports.handler = async (event) => {
     const nombre = JSON.parse(event.body).name
     const message = `Sitio *${nombre}* falló al compilar!`
-
     await fetch(
       webhookEndpoint,
       {
