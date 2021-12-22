@@ -5,14 +5,9 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event) => {
     const body = JSON.parse(event.body)
-
-    const nombre = JSON.parse(event.body).name || "lala"
+    const nombre = body.payload.name;
     const message = `Sitio *${nombre}* compilándose!`
-    console.log("typeoof event" + typeof(event))
-    console.log("typeoof event.body" + typeof(event.body))
-    console.log("typeoof body" + typeof(body))
-    console.log("body content ->" + JSON.stringify(body))
-    console.log("%j", body);
+
     await fetch(
       webhookEndpoint,
       {

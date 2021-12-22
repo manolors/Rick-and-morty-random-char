@@ -4,7 +4,8 @@ const webhookEndpoint = "https://discord.com/api/webhooks/923207419918696449/rW9
 const fetch = require("node-fetch");
 
 exports.handler = async (event) => {
-    const nombre = JSON.parse(event.body).name
+    const body = JSON.parse(event.body)
+    const nombre = body.payload.name;
     const message = `Sitio *${nombre}* falló al compilar!`
     await fetch(
       webhookEndpoint,
