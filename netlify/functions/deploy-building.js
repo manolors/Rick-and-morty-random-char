@@ -12,8 +12,10 @@ exports.handler = async () => {
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({
-          text: message,
+        body: JSON.stringify(params = {
+          username: "Buildbot",
+          avatar_url: "",
+          content: message
         }),
       }
     );
