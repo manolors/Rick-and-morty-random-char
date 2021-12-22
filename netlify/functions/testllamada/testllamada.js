@@ -8,6 +8,7 @@ function Saludar(nombre) {
 
 const handler = async (event) => {
   try {
+    console.log("%j", event)
     const nombre = event.queryStringParameters.name || 'World'
     return {
       statusCode: 200,
