@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event) => {
     const body = JSON.parse(event.body)
+    const nombre = "lala"
     const message = `Sitio *${nombre}* desplegado con éxito!`
     console.log("typeoof event" + typeof(event))
     console.log("typeoof event.body" + typeof(event.body))
