@@ -1,28 +1,26 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const webhookEndpoint = "https://webhook.site/ae9798bc-5609-4443-aed5-bfb59520dbfe"
-const handler = async (event) => {
-  try {
-    sendMessage(webhookEndpoint, "Deploy building")
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: `Hello ${subject}` }),
-    }
-  } catch (error) {
-    return { statusCode: 500, body: error.toString() }
-  }
-}
 
-function sendMessage(endpoint, message) {
-  const request = new XMLHttpRequest();
-  request.open("POST", endpoint);
+const fetch = require("node-fetch");
 
-  request.setRequestHeader('Content-type', 'application/json');
+exports.handler = async () => {
+    const message = "Repo building!"
+    await fetch(
+      webhookEndpoint,
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          text: message,
+        }),
+      }
+    );
 
-  const params = {
-    content: message
-  }
 
-  request.send(JSON.stringify(params));
-}
-
-module.exports = { handler }
+  return {
+    statusCode: 200,
+    body: JSON.stringify({}),
+  };
+};
