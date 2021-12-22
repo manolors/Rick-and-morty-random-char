@@ -8,7 +8,9 @@ exports.handler = async (event) => {
     const message = `Sitio *${nombre}* compilándose!`
     console.log("typeoof event" + typeof(event))
     console.log("typeoof event.body" + typeof(event.body))
-    console.log("typeoof event.body.name" + typeof(event.body.name))
+    console.log("typeoof body" + typeof(body))
+    console.log("body content ->" + JSON.stringify(body))
+    console.log("%j", body);
     await fetch(
       webhookEndpoint,
       {
